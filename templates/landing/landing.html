@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> </title>
+
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    </head>
+    <body>
+
+        <div class="conteiner">
+            <div class="row ">
+                <div class="col-md-12">
+                     <h1 class="title">Страница скоро откроется</h1>
+                    <h1 class="title"> Оставьте Ваш email</h1>
+                        <div class="col-md-offset-5">
+                            <form action="" method="post"> {% csrf_token %}
+                                {{ form.as_p }}
+                                <div>
+                                    <button type="submit" class="btn btn-primary">Отправить</button>
+                                </div>
+                            </form>
+
+                        </div>
+                </div>
+
+            </div>
+        </div>
+
+    </body>
+</html>
